@@ -10,8 +10,8 @@ public class TestLambda {
 
             int x = 999; //acts as local variable
 
-            /**In lambda exprn this refers to outer class members
-             * because there is no object store available */
+            /**Because there is no object store available,
+             * this refers to current outer class members in lambda exprn.*/
             System.out.println(this.x);
 
         };
