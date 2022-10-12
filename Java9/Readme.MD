@@ -7,9 +7,7 @@
   - Type in>
     - java --list-modules
 
-<picture>
-  <img media="(prefers-color-scheme: dark)" alt="Shows an illustrated output from the command prompt." src="assets/images/modularization-1.png">
-</picture>
+![Shows an illustrated output from the command prompt](/assets/images/modularization-1.PNG)
 
 * As can be seen, the whole JDK has been modularized into a number of modules.
 * So, when you build a java program, you can choose which modules you want to make use of...
@@ -22,9 +20,7 @@
 - Type in>
   - java -d java.sql
 
-<picture>
-  <img media="(prefers-color-scheme: dark)" alt="Shows an illustrated output from the command prompt." src="assets/images/modularization-2.png">
-</picture>
+![Shows an illustrated output from the command prompt](/assets/images/modularization-2.PNG)
 
   - You'd notice that java.sql requires a few modules to be present.
   
