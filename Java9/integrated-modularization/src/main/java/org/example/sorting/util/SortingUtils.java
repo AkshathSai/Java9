@@ -1,4 +1,4 @@
-package org.example.util;
+package org.example.sorting.util;
 
 import org.example.sorting.algorithm.BubbleSort;
 
