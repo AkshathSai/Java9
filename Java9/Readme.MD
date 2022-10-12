@@ -8,7 +8,7 @@
     - java --list-modules
 
 <picture>
-  <img media="(prefers-color-scheme: dark)" alt="Shows an illustrated output from the command prompt." src="assets/java9/modularization.png">
+  <img media="(prefers-color-scheme: dark)" alt="Shows an illustrated output from the command prompt." src="assets/images/modularization-1.png">
 </picture>
 
 * As can be seen, the whole JDK has been modularized into a number of modules.
@@ -23,7 +23,7 @@
   - java -d java.sql
 
 <picture>
-  <img media="(prefers-color-scheme: dark)" alt="Shows an illustrated output from the command prompt." src="assets/java9/modularization2.png">
+  <img media="(prefers-color-scheme: dark)" alt="Shows an illustrated output from the command prompt." src="assets/images/modularization-2.png">
 </picture>
 
   - You'd notice that java.sql requires a few modules to be present.
