@@ -7,7 +7,7 @@
   - Type in>
     - java --list-modules
 
-![Shows an illustrated output from the command prompt](/assets/images/modularization-1.PNG)
+![Shows an illustrated output from the command prompt](/assets/images/modularization.PNG)
 
 * As can be seen, the whole JDK has been modularized into a number of modules.
 * So, when you build a java program, you can choose which modules you want to make use of...
