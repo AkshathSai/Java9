@@ -8,6 +8,7 @@ package org.example.threads;
 
 class Task1 extends Thread {
 
+    @Override
     public void run() { //We need to match the exact signature of Thread class run method
         System.out.println("Task-1 Kicked off");
         for (int i=101; i<199; i++) {
@@ -59,6 +60,16 @@ public class ThreadsDemo {
 
         Thread thread = new Thread(runnable);
         thread.start();
+
+        Thread thread2 = new Thread( () -> {
+            System.out.println("Task-5 Kicked off");
+                for (int i=501; i<599; i++) {
+                    System.out.print(i + " ");
+                }
+            System.out.println("\nTask-5 done!");
+        });
+
+        thread2.start();
 
         //Task-4
         System.out.println("Task-4 Kicked off");
