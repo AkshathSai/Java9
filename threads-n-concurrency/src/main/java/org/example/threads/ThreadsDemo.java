@@ -32,7 +32,7 @@ class Task2 implements Runnable {
 
 public class ThreadsDemo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         /**
          * calling run() is a routine way of invoking a method,
@@ -61,6 +61,12 @@ public class ThreadsDemo {
         Thread thread = new Thread(runnable);
         thread.start();
 
+        /**
+         * Inter thread communication
+         */
+        thread.join(); //The next thread will be on hold till this thread completes
+
+
         Thread thread2 = new Thread( () -> {
             System.out.println("Task-5 Kicked off");
                 for (int i=501; i<599; i++) {
@@ -69,6 +75,13 @@ public class ThreadsDemo {
             System.out.println("\nTask-5 done!");
         });
 
+        /** Thread Prioritization
+         *  @Priority:
+         *  1 - Minimum
+         *  5 - Normal
+         *  10 - High Priority
+         */
+        thread2.setPriority(10);
         thread2.start();
 
         //Task-4
