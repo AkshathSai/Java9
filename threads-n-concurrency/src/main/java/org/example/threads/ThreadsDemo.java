@@ -78,7 +78,7 @@ public class ThreadsDemo {
         /** Thread Prioritization
          *  @Priority:
          *  1 - Minimum
-         *  5 - Normal
+         *  5 - Normal (default)
          *  10 - High Priority
          */
         thread2.setPriority(10);
