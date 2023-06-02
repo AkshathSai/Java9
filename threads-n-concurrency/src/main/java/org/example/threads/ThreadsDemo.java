@@ -22,7 +22,7 @@ class Task2 implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Task-2 Kicked off");
+        System.out.println("\nTask-2 Kicked off");
         for (int i=201; i<299; i++) {
             System.out.print(i + " ");
         }
