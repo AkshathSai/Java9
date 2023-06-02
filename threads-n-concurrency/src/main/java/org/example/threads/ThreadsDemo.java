@@ -80,6 +80,10 @@ public class ThreadsDemo {
          *  1 - Minimum
          *  5 - Normal (default)
          *  10 - High Priority
+         *
+         *  Priority is just a hint/request to the scheduler & the scheduler may
+         *  choose to ignore it (depends on the OS & the platform's JVM implementation)
+         *
          */
         thread2.setPriority(10);
         thread2.start();
@@ -92,6 +96,28 @@ public class ThreadsDemo {
         System.out.println("\nTask-4 done!");
 
         System.out.println("Main done!");
+
+        Thread sleepyThread = new Thread(() -> {
+            System.out.println("\nUnleashing the sleepy Thread");
+            try {
+                System.out.println("Sleeping...");
+                Thread.sleep(8000);
+                System.out.println("Wakey! Wakey! -> sleepy Thread ");
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+        sleepyThread.start();
+
+        /** Yielding 'cause the primary purpose of the sleepy thread is to sleep
+         *  Therefore, we can request/hint scheduler to allocate the CPU time for other threads
+         *
+         *  Again, yield is just a hint/request to the scheduler & the scheduler may
+         *  choose to ignore it (depends on the OS & the platform's JVM implementation)
+         */
+        sleepyThread.yield();
+
     }
 
 }
