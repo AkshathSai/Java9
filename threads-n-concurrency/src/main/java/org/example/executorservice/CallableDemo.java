@@ -29,7 +29,7 @@ public class CallableDemo {
 
         /**
          * Future is a result but not really a method,
-         * it's a promise that there'll be a result
+         * it's a promise that we'll have a result at a later point of time
          */
         Future<String> hellofuture = executorService.submit(new CallableTask("Task-1"));
         System.out.println("new CallableTask executed");
