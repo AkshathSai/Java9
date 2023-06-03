@@ -19,7 +19,7 @@ public class MultipleCallableTasksDemo {
 
         List<Future<String>> futures = executorService.invokeAll(tasks);
 
-        for (Future future: futures) {
+        for (var future: futures) {
             System.out.println(future.get());
         }
 
