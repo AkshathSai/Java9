@@ -3,7 +3,7 @@ package org.example.threads;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ExecutorServiceApp {
+public class ExecutorServiceDemo {
 
     public static void main(String[] args) {
 
