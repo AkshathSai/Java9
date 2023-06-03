@@ -3,7 +3,9 @@ package org.example.executorservice;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-
+/**
+ * Runnable is used for executing Tasks that doesn't return any values
+ */
 class Task extends Thread {
 
     private int taskNumber;
@@ -26,7 +28,7 @@ class Task extends Thread {
 
 }
 
-public class ExecutorServiceApp {
+public class FixedThreadPoolDemo {
 
     public static void main(String[] args) {
 
