@@ -34,7 +34,7 @@ public class LifeWithoutThreads {
         }
         System.out.println("\nTask-4 done!");
 
-        System.out.println("Main done!");
+        System.out.println("ThreadPool done!");
     }
 
 }

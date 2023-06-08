@@ -44,6 +44,6 @@ public class CallableDemo {
 
         executorService.shutdown();
 
-        System.out.println("Main completed");
+        System.out.println("ThreadPool completed");
     }
 }

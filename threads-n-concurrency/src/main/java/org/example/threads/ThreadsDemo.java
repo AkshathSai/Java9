@@ -95,7 +95,7 @@ public class ThreadsDemo {
         }
         System.out.println("\nTask-4 done!");
 
-        System.out.println("Main done!");
+        System.out.println("ThreadPool done!");
 
         Thread sleepyThread = new Thread(() -> {
             System.out.println("\nUnleashing the sleepy Thread");
