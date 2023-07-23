@@ -13,7 +13,10 @@ public class FunctionalApproach1 {
         List<Integer> numbers = List.of(2, 9, 6, 5 ,4 ,3 , 7, 12, 6, 2, 3, 7, 8, 4, 2);
         //printAllNumbersInListFunctional(List.of(2, 9, 6, 5 ,4 ,3 , 7, 12, 6, 2, 3, 7, 8, 4, 2));
         //printAllNumbersInListFunctional(numbers);
+        System.out.println("Even numbers in List: ");
         printEvenNumbersInListFunctional(numbers);
+        System.out.println("\nSquares of Even numbers in List: ");
+        printSquaresOfEvenNumbersInListFunctional(numbers);
     }
 
     private static void printAllNumbersInListFunctional(List<Integer> numbers) {
@@ -52,5 +55,12 @@ public class FunctionalApproach1 {
    /* private static void print(int number) {
         System.out.println(number);
     }*/
+
+    private static void printSquaresOfEvenNumbersInListFunctional(List<Integer> numbers) {
+        numbers.stream() //Convert to a Stream
+                .filter(number -> number % 2 == 0) //Lambda expression
+                .map(number -> number * number) // Mapping each element with the square of the element
+                .forEach(System.out::println); //Method reference
+    }
 
 }
