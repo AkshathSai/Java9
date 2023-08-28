@@ -1,13 +1,27 @@
-# Java-of-today
+# Introduced in Java 9
 
-Java new features 8 to 16
+### Modularization
 
+1. By Java 8, rt.jar (Java Runtime) had grown to 60+ mb and continued to expand.
+* Solution - Modularized JDK. Most Java programmes do not require everything in the rt.jar.
+    - Type in>
+        - java --list-modules
 
-| Version              | New Features                                                                      | 
-| -------------------- |:---------------------------------------------------------------------------------:|                             
-| Java 8               | Functional Programming, Lambdas & Streams, Static & Default methods in Interfaces | 
-| Java 9               | JShell (REPL for Java) , Modularization (Java Platform Module System)             | 
-| Java 10              | Local variable type inference                                                     | 
-| Java 14              | Switch Expressions (Preview in 12 and 13)                                         | 
-| Java 15              | Text blocks (Preview in 13)                                                       | 
-| Java 16              | Record Classes (Preview in 14 and 15)                                             | 
+![Shows an illustrated output from the command prompt](/assets/images/modularization.PNG)
+
+* As can be seen, the whole JDK has been modularized into a number of modules.
+* So, when you build a java program, you can choose which modules you want to make use of...
+
+2. Building Modularized Applications
+
+* Modularization features introduced in Java 9 help you in building more encapsulated, modularized applications.
+* As seen in the preceding illustration, all modules whose names begin with `java` are related to programming and names that start with `jdk` are some kind of tools
+* These modules have dependencies on each other. For instance, `java.base` is the base module, and every Java application will employ it as the default module.
+- Type in>
+    - java -d java.sql
+
+![Shows an illustrated output from the command prompt](/assets/images/modularization-2.PNG)
+
+- You'd notice that java.sql requires a few modules to be present.
+
+#### Let's have a look at the sample application in the src folder to get a sense of what the traditional approach to development is and how we might improve it now that we've gotten modularization.
